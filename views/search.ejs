@@ -1,0 +1,13 @@
+<%- include('partials/header') %>
+<section class="card">
+  <h1>Search</h1>
+  <form method="get" action="/search" class="row">
+    <input type="text" name="q" value="<%= q %>" placeholder="Search something…" maxlength="200">
+    <button type="submit">Search</button>
+  </form>
+  <% if (results !== null) { %>
+    <p class="muted">You searched for: <strong><%= q %></strong></p>
+    <p>No results found.</p>
+  <% } %>
+</section>
+<%- include('partials/footer') %>

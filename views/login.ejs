@@ -1,0 +1,16 @@
+<%- include('partials/header') %>
+<section class="card narrow">
+  <h1>Login</h1>
+  <% if (error) { %><p class="alert"><%= error %></p><% } %>
+  <form method="post" action="/login" class="stack">
+    <label>Username
+      <input type="text" name="username" value="<%= username %>" autocomplete="username" maxlength="100">
+    </label>
+    <label>Password
+      <input type="password" name="password" autocomplete="current-password" maxlength="100">
+    </label>
+    <button type="submit">Sign in</button>
+  </form>
+  <p class="muted">This form never lets anyone in. It exists only as a target for tests.</p>
+</section>
+<%- include('partials/footer') %>

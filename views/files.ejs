@@ -1,0 +1,17 @@
+<%- include('partials/header') %>
+<section class="card">
+  <h1>Files</h1>
+  <form method="get" action="/files" class="row">
+    <input type="text" name="name" value="<%= name %>" placeholder="readme.txt" maxlength="200">
+    <button type="submit">Open</button>
+  </form>
+  <p class="muted">Available:
+    <% names.forEach(function (n) { %><a href="/files?name=<%= encodeURIComponent(n) %>"><%= n %></a> <% }) %>
+  </p>
+  <% if (content !== null) { %>
+    <pre><%= content %></pre>
+  <% } else if (notFound) { %>
+    <p class="alert">File “<%= name %>” not found.</p>
+  <% } %>
+</section>
+<%- include('partials/footer') %>

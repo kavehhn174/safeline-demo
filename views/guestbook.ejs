@@ -1,0 +1,22 @@
+<%- include('partials/header') %>
+<section class="card">
+  <h1>Guestbook</h1>
+  <form method="post" action="/guestbook" class="stack">
+    <label>Name
+      <input type="text" name="name" maxlength="50" placeholder="Anonymous">
+    </label>
+    <label>Message
+      <textarea name="message" rows="3" maxlength="300" required></textarea>
+    </label>
+    <button type="submit">Post</button>
+  </form>
+</section>
+
+<% entries.forEach(function (e) { %>
+  <section class="card entry">
+    <strong><%= e.name %></strong>
+    <span class="muted"><%= e.at %></span>
+    <p><%= e.message %></p>
+  </section>
+<% }) %>
+<%- include('partials/footer') %>

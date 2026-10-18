@@ -1,0 +1,17 @@
+<%- include('partials/header') %>
+<section class="card hero">
+  <h1>Welcome 👋</h1>
+  <p>This is a deliberately simple website with a few inputs, so you can see
+     <strong>SafeLine</strong> inspect, allow and block HTTP traffic in front of it.</p>
+  <p class="muted">If you can read this page, the proxy and the app are both working.</p>
+</section>
+
+<section class="grid">
+  <a class="card tile" href="/search?q=hello"><h3>Search</h3><p>Reflects your query in the page.</p></a>
+  <a class="card tile" href="/login"><h3>Login</h3><p>A form that always says no.</p></a>
+  <a class="card tile" href="/guestbook"><h3>Guestbook</h3><p>Post a message and see it listed.</p></a>
+  <a class="card tile" href="/files?name=readme.txt"><h3>Files</h3><p>Look up a sample file by name.</p></a>
+  <a class="card tile" href="/api/users?id=1"><h3>JSON API</h3><p>Fetch users by id.</p></a>
+  <a class="card tile" href="/healthz"><h3>Health</h3><p>Plain <code>ok</code> response.</p></a>
+</section>
+<%- include('partials/footer') %>

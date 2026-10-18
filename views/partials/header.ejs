@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title><%= title %> · <%= siteName %></title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="/">🛡️ <%= siteName %></a>
+  <nav>
+    <a href="/" class="<%= currentPath === '/' ? 'active' : '' %>">Home</a>
+    <a href="/search" class="<%= currentPath === '/search' ? 'active' : '' %>">Search</a>
+    <a href="/login" class="<%= currentPath === '/login' ? 'active' : '' %>">Login</a>
+    <a href="/guestbook" class="<%= currentPath === '/guestbook' ? 'active' : '' %>">Guestbook</a>
+    <a href="/files" class="<%= currentPath === '/files' ? 'active' : '' %>">Files</a>
+    <a href="/api/users" class="<%= currentPath.startsWith('/api') ? 'active' : '' %>">API</a>
+  </nav>
+</header>
+<main class="container">
